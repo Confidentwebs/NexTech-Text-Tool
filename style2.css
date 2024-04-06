@@ -1,0 +1,143 @@
+:root{
+    --main-color: #abf600;
+    --normal-color: #ffffff;
+    --text-color: #000000;
+    --border-color: #6b6969;
+    --input-border: #8f8e8e;
+    --placeholder: #6b6969;
+    --primary-font: 'Roboto', sans-serif;
+    --mono-font: 'Roboto Mono', monospace;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--mono-font);
+    /* padding-bottom: 100px; This should be equal to the height of your footer */
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--text-color) 1px solid;
+    margin: 0 30px; /* Adjust the value as needed */
+    
+}
+
+
+
+
+img {
+    padding-left: 50px;
+}
+
+header a {
+    margin-right: 80px; /* Add margin to the right of the "Log Out" link */
+    text-decoration: none;
+    color: red;
+    font-size: large;
+    
+}
+p{
+    padding-top: 70px;
+}
+
+.container{
+    padding: 30px;
+    text-align: center;
+}
+
+#input{
+    width: 80%;
+    height: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button{
+    width: 20%;
+    height: 30px;
+}
+
+.copy-button{
+    position: relative;
+    cursor: pointer;
+}
+.copy-button i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--border-color);
+}
+input::placeholder {
+    opacity: 0.5; /* Adjust this value as needed */
+}
+
+.history{
+    margin-left: 11%;
+    margin-bottom: 3%;
+}
+.history-button{
+    position: relative;
+    cursor: pointer;
+}
+
+.history-button i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--border-color);
+}
+footer {
+    bottom: 0;
+    border-top: var(--text-color);
+    width: 100%;
+    background-color: var(--main-color); /* or any color you prefer */
+    color: var(--normal-color); /* or any color you prefer */
+    text-align: center;
+    height: 100px;
+}
+
+
+/* Add your existing CSS here */
+
+@media screen and (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+ 
+    }
+
+    img {
+    padding-left: 0px;
+    width: 150px;
+}
+
+header{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30px;
+}
+
+footer {
+
+    bottom: 0;
+    height: 100px;
+}
+
+#input{
+    width: 70%;
+  }
+
+  button{
+    width: 40%;
+    height: 50px;
+}
+}

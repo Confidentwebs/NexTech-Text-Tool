@@ -1,0 +1,172 @@
+:root{
+    --main-color: #abf600;
+    --normal-color: #ffffff;
+    --text-color: #000000;
+    --border-color: #6b6969;
+    --input-border: #8f8e8e;
+    --placeholder: #6b6969;
+    --primary-font: 'Roboto', sans-serif;
+    --mono-font: 'Roboto Mono', monospace;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-size: 16px;
+    font-family: var(--mono-font);
+}
+
+label{
+    font-family: var(--primary-font);
+    font-size: 10px;
+}
+
+.flex{
+    display: flex;
+    height: 100%;
+}
+
+
+
+#item1{
+    flex: 1;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#item2{
+    flex: 1;
+    background-color: var(--normal-color);
+    /* justify-content: center;
+    align-items: center;
+    text-align: center; */
+    padding: 0;
+    border-left: none;
+    border-left: var(--text-color) 1px solid;
+}
+
+#paragraph1{
+    text-align: center;
+    border-bottom: var(--border-color) 1px solid;
+    margin: 0;
+    padding: 40px 0;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+
+#create{
+    font-size: 28px;
+    font-family: var(--mono-font);
+    word-spacing: 5px;
+    letter-spacing: 3px;
+}
+a{
+    text-decoration: none;
+    color: #15ff00;
+    font: bold;
+}
+
+#item2 label {
+    text-align: left;
+}
+.form{
+    text-align: center;
+    padding-top: 20PX;
+}
+
+
+input{
+    width: 300PX;
+    height: 40PX;
+    padding: 10px;
+}
+#dropdown{
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+}
+
+button{
+    padding: 10px;
+    width: 200px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Style for the eye icon */
+.toggle-password {
+    position: relative;
+    cursor: pointer;
+}
+.toggle-password i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+/* Style for the password input field */
+.password-input {
+    position: relative;
+}
+.password-input input[type="password"] {
+    padding-right: 30px; /* Ensure space for the eye icon */
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+#advice{
+    font-size: smaller;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body{
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        font-size: 14px;
+    }
+    .flex {
+        flex-direction: column; /* Display items vertically */
+    }
+
+    #item1,
+    #item2 {
+        flex: none; /* Reset flex property */
+        
+        margin: 0;
+        padding: 0;
+    }
+
+    img{
+        width: 200px;
+    }
+}
