@@ -65,7 +65,7 @@ img{
     padding: 40px 0;
     width: 100%;
     box-sizing: border-box;
-    
+    box-shadow: 0 2px 0px #abf600;
 }
 
 #create{
@@ -76,8 +76,9 @@ img{
 }
 a{
     text-decoration: none;
-    color: #15ff00;
+    color: var(--main-color);
     font: bold;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.63);
 }
 
 #item2 label {
@@ -93,11 +94,13 @@ input{
     width: 300PX;
     height: 40PX;
     padding: 10px;
+    box-shadow: 0 6px 5px rgb(0, 0, 0);
 }
 #dropdown{
     width: 300px;
     height: 40px;
     padding: 10px;
+    box-shadow: 0 6px 5px rgb(0, 0, 0);
 }
 
 button{
@@ -105,6 +108,8 @@ button{
     width: 200px;
     font-size: 12px;
     cursor: pointer;
+    box-shadow: 0 6px 5px rgb(0, 0, 0);
+    background-color: #abf600;
 }
 
 /* Style for the eye icon */
@@ -139,6 +144,45 @@ button{
     font-size: smaller;
 }
 
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.form {
+    animation-name: slideIn;
+    animation-duration: 1.5s; /* Adjust the duration as needed */
+    animation-timing-function: ease-out; /* Adjust the timing function as needed */
+    animation-fill-mode: forwards; /* Keep the final state of the animation */
+}
+.form {
+    transform: translateX(-100%); /* Initially move the content off-screen */
+}
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#paragraph1 {
+    animation-name: slideInFromBottom;
+    animation-duration: 1s; /* Adjust the duration as needed */
+    animation-timing-function: ease-out; /* Adjust the timing function as needed */
+    animation-fill-mode: forwards; /* Keep the final state of the animation */
+}
+#paragraph1 {
+    transform: translateY(100%);
+    opacity: 0;
+}
 
 
 @media screen and (max-width: 768px) {
