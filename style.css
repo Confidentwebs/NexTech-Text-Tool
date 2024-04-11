@@ -144,24 +144,6 @@ button{
     font-size: smaller;
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-.form {
-    animation-name: slideIn;
-    animation-duration: 1.5s; /* Adjust the duration as needed */
-    animation-timing-function: ease-out; /* Adjust the timing function as needed */
-    animation-fill-mode: forwards; /* Keep the final state of the animation */
-}
-.form {
-    transform: translateX(-100%); /* Initially move the content off-screen */
-}
 @keyframes slideInFromBottom {
     from {
         transform: translateY(100%);
